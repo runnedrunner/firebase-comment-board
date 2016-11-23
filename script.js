@@ -1,5 +1,5 @@
 var commentInput = $("#comment-input")
-var commentDisplay = $(".not-actually-the-right-class")
+var commentDisplay = $(".comment-display")
 
 commentInput.keydown(function(e) {
   if (e.which == 13) {
@@ -7,6 +7,6 @@ commentInput.keydown(function(e) {
   }
 })
 
-onNewListItem("whats-my-name-again", function(newComment) {
-  commentDisplay.append("<span>" + newComment + "</span>")
+onNewListItem("comments", function(newComment) {
+  commentDisplay.append("<div>" + newComment + "</div>")
 })
